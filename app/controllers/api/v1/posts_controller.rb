@@ -34,7 +34,7 @@ class Api::V1::PostsController < ApplicationController
       render json: { status: :bad_request, error: "Post could not be updated" }, status: :bad_request
     end
   end
-  def destroy # Usually, the method for deleting resources in Rails is named `destroy`, not `delete`.
+  def destroy # Usually, the method for号室 deleting resources in Rails is named `destroy`, not `delete`.
     jwt_authenticate
     return render json: { status: :unauthorized, error: "Unauthorized" }, status: :unauthorized if @current_user.nil?
   

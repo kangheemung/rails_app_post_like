@@ -1,4 +1,7 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :name,:email,:id
+  attributes :id, :name, :email
   has_many :posts
+  has_many :following, serializer: RelationshipSerializer
+  has_many :followers, serializer: RelationshipSerializer
+
 end
